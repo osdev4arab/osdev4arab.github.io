@@ -6,7 +6,7 @@ title: Herring Cove
 
 {% if site.posts != empty %}
 <div class="recent-posts">
-  <h1>Recent Posts</h1>
+  <h1>مقالات حديثة</h1>
   {% for post in site.posts limit: 3 %}
     {% if forloop.first %}
       {% assign add_class = 'most-recent' %}
@@ -33,7 +33,7 @@ title: Herring Cove
     {% assign fresh_tag = '' %}
   {% endfor %}
   <ul>
-    <a href="{{ site.baseurl }}/list.html">View More...</a>
+    <a href="{{ site.baseurl }}/list.html">شاهد المزيد...</a>
   </ul>
 </div>
 {% endif %}
