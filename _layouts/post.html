@@ -2,12 +2,19 @@
 layout: default
 ---
 {% assign post = page %}
-{% if post.tags.size > 0 %}
-    {% capture tags_content %}Posted in  
+{% if post.tags.size > 0 or post.categories.size > 0 %}
+    {% capture tags_content %}Posted 
+{% if post.categories.size > 0 %}
+	in  
 	{% for post_cat in post.categories %}
 	<a href="{{ site.baseurl }}/category/{{ post_cat }}"><code>{{ post_cat }}</code></a>,
 	{% endfor %}
-	with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+{% endif %}
+{% if post.tags.size > 0 %}
+	with
+	{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: 
+	{% endif %} 
+	{% endcapture %}
 		{% for post_tag in post.tags %}
     		{% assign tag = site.data.tags[post_tag] %}
         {% if tag %}
