@@ -1,7 +1,7 @@
 ---
 title: وده يطلع إيه؟
 date: 2015-07-12 23:14:16
-categories: jekyll testing
+categories: jekyll
 tags: [c]
 direction: ltr
 ---
