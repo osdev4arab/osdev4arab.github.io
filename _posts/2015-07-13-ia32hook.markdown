@@ -1,7 +1,8 @@
 ---
 title:  "ia32hook"
 date:   2015-07-13 19:31:16
-categories: C x86
+categories: programming
+tags: [c, x86, hooking]
 direction: ltr
 ---
 ia32hook is a tiny library for [hooking][] procedures in the same address space. The hooked function's calling convention needs to be the same as the hook. So for hooking `WINAPI` functions one would need to specify `__stdcall`.

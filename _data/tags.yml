@@ -1,8 +1,11 @@
-bare-bones:
-  name: Bare Bones
+x86:
+  name: x86
 
 c:
-  name: C Pitfalls
+  name: C
+
+faq:
+  name: FAQ
 
 linux:
-  name: Linux device drivers
+  name: Linux
