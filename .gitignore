@@ -2,5 +2,5 @@ _site
 *~
 
 *.swp
-
 *.swo
+.DS_Store
