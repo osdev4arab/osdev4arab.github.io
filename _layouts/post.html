@@ -1,13 +1,36 @@
 ---
 layout: default
 ---
-<div id="article">
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+    {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+		{% for post_tag in post.tags %}
+    		{% assign tag = site.data.tags[post_tag] %}
+        {% if tag %}
+            {% capture tags_content_temp %}{{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+            {% assign tags_content = tags_content_temp %}
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% assign tags_content = '' %}
+{% endif %}
+<div id="article"
+{% if page.direction %}
+	   dir="{{ page.direction }}"
+{% endif %} >
   <div class="article-title">{{ page.title }}</div>
+  <p id="post-meta">{{ tags_content }}</p>
   <p class="meta">
     <small>
       &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
     </small>
-  </p> <hr/>
+
+  </p>
+	<div class="meta">
+		<img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
+		<span class="author">{{ page.post_author }}</span>
+	</div>
+  <hr/>
   <div class="post">
     {{ content }}
   </div>

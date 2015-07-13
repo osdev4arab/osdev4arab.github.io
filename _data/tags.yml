@@ -1,0 +1,8 @@
+bare-bones:
+  name: Bare Bones
+
+c:
+  name: C Pitfalls
+
+linux:
+  name: Linux device drivers

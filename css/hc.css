@@ -41,7 +41,10 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover
 p
 {
   font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
-  font-weight:200
+  font-weight:normal;
+  font-size:19px;
+  line-height: 1.8;
+  text-align:justify;
 }
 
 .posts
@@ -218,11 +221,11 @@ blockquote
 
 ul,ol
 {
-  font-weight:lighter
 }
 
 pre
 {
+  direction: ltr;
   background:#f5f5f8
 }
 
@@ -352,7 +355,8 @@ pre
 .showcase-button
 {
   border-radius:.5em;
-  background-color:transparent;
+  b
+  ackground-color:transparent;
   border:1px solid rgba(255,255,255,.4);
   color:rgba(255,255,255,.8);
   font-weight:200;
@@ -391,12 +395,12 @@ img
   margin-bottom:30px;
   background-color:#f9f9f9;
   box-shadow:1px 1px 0 1px #e8e8e8;
-  padding:10px 0 0 40px
+  padding:10px 40px 0
 }
 
 .post
 {
-  padding-bottom:30px
+  padding-bottom:30px;
 }
 
 .user-social

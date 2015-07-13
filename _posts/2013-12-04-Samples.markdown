@@ -1,5 +1,6 @@
 ---
 title: Samples
+direction: ltr
 ---
 
 # Samples
