@@ -32,7 +32,7 @@ char *x = malloc(4);
 free(x); 
 printf("%p\n", (void *)x); //سلوك غير معرف 
 
-/* طرء عدة تغييرات على كائن دون فواصل (Sequence Points) &rlm; */
+/* طرء عدة تغييرات على كائن دون فواصل (Sequence Points) */
 // C11 §6.5p2
 int x = 42; 
 x = x++; //سلوك غير معرف 

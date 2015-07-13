@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header id="post-header">
+    <h2 id="post-subtitle">Articles by categories</h4>
+</header>
+
+{% for category in site.categories %}
+  <div class="list-group">
+<h3 name="{{ category | first }}">{{ category | first }}</h3>
+  <div class="list-group">
+    {% for posts in category %}
+      {% for post in posts %}
+	  	{% if post.title %}
+        <a href="{{ post.url }}/" class="list-group-item">
+                <h4 class="list-group-item-heading">{{ post.title }}</h4>
+         </a>
+		 {% endif %}
+      {% endfor %}
+    {% endfor %}
+  <div class="list-group">
+  </div>
+{% endfor %}

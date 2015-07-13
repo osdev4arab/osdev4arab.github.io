@@ -27,8 +27,12 @@ layout: default
 
   </p>
 	<div class="meta">
+  {% if page.post_gravatar %}
 		<img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
+  {% endif %}
+  {% if page.post_author %}
 		<span class="author">{{ page.post_author }}</span>
+  {% endif %}
 	</div>
   <hr/>
   <div class="post">

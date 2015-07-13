@@ -1,0 +1,16 @@
+{% for post in site.posts %}
+  <div id="article"
+{% if post.direction %}
+	   dir="{{ post.direction }}"
+{% endif %} >
+<a href="{{ site.baseurl }}{{ post.url }}"><h4>{{ post.title }}</h4></a>
+<p>{{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}">
+{% if post.direction == rtl %}
+	إقرأ المزيد...
+{% else %}
+Read more...
+{% endif %}
+</a></p>
+	</div>
+{% endfor %}
+
