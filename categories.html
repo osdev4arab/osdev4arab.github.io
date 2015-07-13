@@ -12,7 +12,7 @@ layout: default
     {% for posts in category %}
       {% for post in posts %}
 	  	{% if post.title %}
-        <a href="{{ post.url }}/" class="list-group-item">
+        <a href="{{ post.url }}" class="list-group-item">
                 <h4 class="list-group-item-heading">{{ post.title }}</h4>
          </a>
 		 {% endif %}
