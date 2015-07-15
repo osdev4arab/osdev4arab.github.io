@@ -1,0 +1,23 @@
+{% if post.tags.size > 0 or post.categories.size > 0 %}
+    {% capture classification %}Posted 
+{% if post.categories.size > 0 %}
+	in  
+	{% for post_cat in post.categories %}
+	<a href="{{ site.baseurl }}/category/{{ post_cat }}"><code>{{ post_cat }}</code></a>,
+	{% endfor %}
+{% endif %}
+{% if post.tags.size > 0 %}
+	with
+	{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: 
+	{% endif %} 
+	{% endcapture %}
+		{% for post_tag in post.tags %}
+    		{% assign tag = site.data.tags[post_tag] %}
+        {% if tag %}
+		{% capture tags_content_temp %}{{ classification }}<a href="{{ site.baseurl }}/tag/{{ post_tag }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+            {% assign classification = tags_content_temp %}
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% assign tags_content = '' %}
+{% endif %}

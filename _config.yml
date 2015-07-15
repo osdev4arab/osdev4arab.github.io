@@ -1,12 +1,13 @@
 name: osdev4arab
-author: a3f
+author: osdev4arab
+domain: a3f.at
 baseurl: /blog
 description: نحو مجتمع عربي عن تطوير نظم التشغيل
-github: http://www.github.com/a3f
+github: http://www.github.com/osdev4arab/osdev4arab
 twitter: http://www.twitter.com/
-facebook: http://www.facebook.com
+facebook: https://www.facebook.com/groups/osdev4arab/
 linkedin: http://www.linkedin.com
-email: ahmad@a3f.at
+email: osdev4arab@gmail.com 
 location: $HOME
 disqus: osdev4arab 
 ##Make sure to edit the above fields, especially for disqus.
