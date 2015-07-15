@@ -2,6 +2,7 @@
 layout: default
 ---
 {% assign post = page %}
+{% assign author = site.data.authors[post.author] %}
 {% include classification.html %}
 <div id="article"
 {% if page.direction %}
@@ -16,12 +17,17 @@ layout: default
 
   </p>
 	<div class="meta">
-  {% if page.post_gravatar %}
-		<img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
+  {% if author.gravatar %}
+		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
   {% endif %}
-  {% if page.post_author %}
-		<span class="author">{{ page.post_author }}</span>
+  {% if author.name %}
+		<span class="author">{{ author.name }}</span>
+  {% else %}
+  {% if post.author %}
+		<span class="author">{{ post.author }}</span>
   {% endif %}
+  {% endif %}
+
 	</div>
   <hr/>
   <div class="post {{ post.direction }}" 

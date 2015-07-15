@@ -2,6 +2,7 @@
 title: وده يطلع إيه؟
 date: 2015-07-12 23:14:16
 categories: jekyll
+author: jekyll
 direction: ltr
 ---
 

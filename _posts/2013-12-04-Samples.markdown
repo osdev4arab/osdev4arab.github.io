@@ -1,6 +1,7 @@
 ---
 title: Samples
 categories: jekyll
+author: jekyll
 direction: ltr
 ---
 

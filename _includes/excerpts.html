@@ -6,7 +6,16 @@
 {% endif %} >
 <a href="{{ site.baseurl }}{{ post.url }}"><h4>{{ post.title }}</h4></a>
 <div class="post {{ post.direction }}">{{ post.excerpt }}</div><p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left;">     <small>
-	&nbsp;<i class="fa fa-calendar-o"></i> {{ post.date | date_to_string}} {% if post.post_author %} by {{ post.post_author}} {% endif %} | 
+	&nbsp;<i class="fa fa-calendar-o"></i> {{ post.date | date_to_string}} {% if post.author %}
+
+{% assign author = site.data.authors[post.author] %}
+   	by 
+	{% if author.name %}
+	{{ author.name }}
+	{% else %}
+	{{ post.author }}
+	{% endif %}
+   	{% endif %}	| 
 
 	  {{ classification }}</small></p>
 	</div>

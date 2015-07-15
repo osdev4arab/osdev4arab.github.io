@@ -2,8 +2,7 @@
 title:  سي ليست لغة ”جرب و شوف اللي يطلع لك“
 date:   2015-06-05 15:59:42
 categories: programming
-post_author: Ahmad Fatoum
-post_gravatar: 6b89d79fbdc1bcdc4266cd2fd8440a6e 
+author: a3f
 tags: c
 comments: true
 ---
