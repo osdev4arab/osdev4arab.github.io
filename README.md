@@ -44,6 +44,40 @@ comments: true ## enable disqus comments?
 post_author: a3f ## can be left out
 post_gravatar: deadbeefdeadbdeefdeadbeefdeadbeef ## Get Gravatar avatar
 ---
+Your text here in Github flavoured Markdown
+```
+
+#### Add an author
+Any post can have an author tag in the YAML front matter. If a Link/avatar/bio are wished for, it is quite easy to. Open `\_data/authors.yml` and just add a new entry:
+
+```
+jekyll:
+    name:       Dr. Henry Jekyll
+    gravatar:   deadbeefdeadbeefdeadbeefdeadbeef
+    site:       example/com
+    contact:    jekyll@example.com
+    biodir:     ltr
+    bio: 		Dr. Jekyll is a large, well-made, smooth-faced man of fifty with something of a
+ 				slyish cast", who occasionally feels he is battling between the good and
+				evil within himself, thus leading to the struggle between his dual personalities
+				of Henry Jekyll and Edward Hyde.
+```
+
+Now any post by said author will have the author name linking to his site and have the bio at the end of the article.
+
+For on-site longer bios, a page can be creaed and stylized with markdown. For that see next point.
+
+#### Add a general page
+Just add a page under `pages/` with following content:
+```
+---
+layout: page
+permalink: /author/jekyll/
+---
+---
+#Dr. Henry Jekyll
+
+Hello my name is <em>Jekyll</em> and I preprocess and serve **static blogs** by day. I mutate by night.
 ```
 
 #### Adding new tags

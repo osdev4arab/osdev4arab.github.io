@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div id="article"
+{% if page.direction %}
+	   dir="{{ page.direction }}"
+{% endif %} >
+  <div class="post {{ page.direction }}"
+    {{ content }}
+  </div>
+</div>

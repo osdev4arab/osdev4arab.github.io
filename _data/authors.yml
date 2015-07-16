@@ -8,4 +8,5 @@ a3f:
 
 jekyll:
     name:       Jekyll
+    site:       /blog/u/jekyll/
 
