@@ -22,16 +22,16 @@ Bal6eem ia based on [Herring Cove](https://github.com/arnp/herring-cove), a clea
 3. Edit the `_config.yml` file
 #### Github Pages
 ##### Organization or user pages
-1. Create a {username}.github.io or {orgname}.github.io repository
-2. Fork this project. Delete the master branch and rename the gh-pages to master
+1. Create a `{username}.github.io` or `{orgname}.github.io` repository
+2. Fork this project. Delete the `master` branch and rename the `gh-pages` to `master`
 ##### Project page
-1. clone the gh-pages branch of this repository to your own project
+1. clone the `gh-pages` branch of this repository to your own project
 
 ### Use
 #### Add a blog post
-A new file needs to be created in the `\_posts/` directory with following schema: `yyyy-mm-dd-Some-Title.markdown`.
+A new file needs to be created in the `_posts/` directory with following schema: `yyyy-mm-dd-Some-Title.markdown`.
 
-The post format is Github-flavored markdown, which is a strict superset of HTML, so you are free to mix them as you please. Every File has a YAML Front Matter at its start, with optional parameters that specify how the site is to be displayed. A full example	(## are comments):
+The post format is Github-flavored markdown, which is a strict superset of HTML, so you are free to mix them as you please. Every File has a YAML Front Matter at its start, with optional parameters that specify how the site is to be displayed. A full example	(`##` are comments):
 
 ```
 ---
@@ -47,7 +47,7 @@ Your text here in Github flavoured Markdown
 ```
 
 #### Add an author
-Any post can have an author tag in the YAML front matter. If a Link/avatar/bio are wished for, it is quite easy to. Open `\_data/authors.yml` and just add a new entry:
+Any post can have an author tag in the YAML front matter. If a link/avatar/bio are wished for, it is quite easy to. Open `_data/authors.yml` and just add a new entry:
 
 ```
 jekyll:
@@ -64,7 +64,7 @@ jekyll:
 
 Now any post by said author will have the author name linking to his site and have the bio at the end of the article.
 
-For on-site longer bios, a page can be creaed and stylized with markdown. For that see next point.
+For on-site longer bios, a page can be created and stylized with markdown. For that see next point.
 
 #### Add a general page
 Just add a page under `pages/` with following content:
