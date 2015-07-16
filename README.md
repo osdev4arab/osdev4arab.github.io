@@ -20,10 +20,12 @@ Bal6eem ia based on [Herring Cove](https://github.com/arnp/herring-cove), a clea
 1. Install Jekyll
 2. Fork or [download](https://github.com/a3f/bal6eem/archive/master.zip) this theme repo
 3. Edit the `_config.yml` file
+ 
 #### Github Pages
 ##### Organization or user pages
 1. Create a `{username}.github.io` or `{orgname}.github.io` repository
 2. Fork this project. Delete the `master` branch and rename the `gh-pages` to `master`
+
 ##### Project page
 1. clone the `gh-pages` branch of this repository to your own project
 
