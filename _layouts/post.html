@@ -21,7 +21,9 @@ layout: default
 		<img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
   {% endif %}
   {% if author.name %}
+  {% if author.site %} <a href="{{ author.site }}"> {% endif %}
 		<span class="author">{{ author.name }}</span>
+  {% if author.site %} </a> {% endif %}
   {% else %}
   {% if post.author %}
 		<span class="author">{{ post.author }}</span>
@@ -36,6 +38,13 @@ layout: default
 	   >
     {{ content }}
   </div>
+</div>
+<div id ="article">
+	<div dir="{{ author.biodir }}" class="post {{ author.biodir }}">
+		<p>
+	{{ author.bio }}
+		</p>
+	</div>
 </div>
 {% if 0 == 1 %}
 {% include share.html %}

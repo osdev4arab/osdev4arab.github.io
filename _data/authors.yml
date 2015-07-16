@@ -1,8 +1,11 @@
 a3f:
     name:       Ahmad Fatoum
     gravatar:   6b89d79fbdc1bcdc4266cd2fd8440a6e
-    link:       http://a3f.at
-    contact:    ahmad@a3f.at
+    site:       http://a3f.at
+    contact:    ahmad@a3f.at (unused)
+    biodir:     ltr
+    bio: Sherlock Holmes (/ˈʃɜrlɒk ˈhoʊmz/) is a fictional character created by Scottish author and physician Sir Arthur Conan Doyle, a graduate of the University of Edinburgh Medical School. A London-based "consulting detective" whose abilities border on the fantastic, Holmes is known for his astute logical reasoning, his ability to adopt almost any disguise and his use of forensic science to solve difficult cases.
+
 jekyll:
     name:       Jekyll
 
