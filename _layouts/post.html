@@ -39,6 +39,7 @@ layout: default
     {{ content }}
   </div>
 </div>
+{% if author.bio %}
 <div id ="article">
 	<div dir="{{ author.biodir }}" class="post {{ author.biodir }}">
 		<p>
@@ -46,6 +47,7 @@ layout: default
 		</p>
 	</div>
 </div>
+{% endif %}
 {% if 0 == 1 %}
 {% include share.html %}
 {% endif %}
