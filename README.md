@@ -41,8 +41,7 @@ categories: osdev bootloader
 tags: c x86 real-mode
 direction: ltr ## this is optional, if left out it defaults to rtl (right to left)
 comments: true ## enable disqus comments?
-post_author: a3f ## can be left out
-post_gravatar: deadbeefdeadbdeefdeadbeefdeadbeef ## Get Gravatar avatar
+author: a3f ## can be left out
 ---
 Your text here in Github flavoured Markdown
 ```
