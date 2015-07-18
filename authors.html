@@ -2,7 +2,7 @@
 layout: default
 ---
 <header id="post-header">
-    <h2 id="post-subtitle">Articles by authors</h4>
+    <h2 id="post-subtitle">المواضيع بحسب الكاتب</h4>
 </header>
 
 {% for author in site.data.authors %}
@@ -10,7 +10,7 @@ layout: default
 {% assign a = site.data.authors[author_id] %}
   <div class="list-group">
 	  {% if a.name %}
-	  <h3 name="{{ author_id }}">{{ a.name }}</h3>
+	  <a href="{{ a.site }}"><h3 name="{{ author_id }}">{{ a.name }}</h3></a>
 	  {% else %}
 	  <h3 name="{{ author_id }}">{{ author_id }}</h3>
 	  {% endif %}
