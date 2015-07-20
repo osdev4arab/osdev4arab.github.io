@@ -2,7 +2,7 @@
 layout: post
 title: عنّا
 direction: rtl
-permalink: /about/
+permalink: /about.html
 noexcerpt: true
 static: true
 contact: osdev4arab@gmail.com
