@@ -12,8 +12,14 @@ layout: default
   <p id="post-meta">{{ classification }}</p>
   <p class="meta">
     <small>
+	{% if page.static != true %}
       &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
+	  {% endif %}
+	  {% if post.contact %}
+	<i class="fa fa-envelope-o"></i>&nbsp;{{ page.contact }} </p>
+  	  {% endif %}
     </small>
+
 
   </p>
 	<div class="meta">
