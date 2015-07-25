@@ -293,63 +293,63 @@ graphics mode والذي تقوم فيه بإخراج رسومات بدلاً م
 من أول ثمانية ألوان في الجدول.
 
 
-<div dir="ltr">
+<div dir="rtl">
 <center>
 <table border="2" width="800px" style="font-size:large; font-family: courier">
 
 <tr>
-<th style="text-align:center;">Color</th>
-<th style="text-align:center;">Index</th>
-<th style="text-align:center;">Color</th>
-<th style="text-align:center;">Index</th>
-<th style="text-align:center;">Color</th>
-<th style="text-align:center;">Index</th>
-<th style="text-align:center;">Color</th>
-<th style="text-align:center;">Index</th>
+<th style="text-align:center;">التسلسل</th>
+<th style="text-align:center;">اللون</th>
+<th style="text-align:center;">التسلسل</th>
+<th style="text-align:center;">اللون</th>
+<th style="text-align:center;">التسلسل</th>
+<th style="text-align:center;">اللون</th>
+<th style="text-align:center;">التسلسل</th>
+<th style="text-align:center;">اللون</th>
 </tr>
 
 <tr>
 <th style="text-align:center;">0</th>
-<th style="text-align:center;background-color: #000000; color: white">Black</th>
+<th style="text-align:center;background-color: #000000; color: white">أسود</th>
 <th style="text-align:center;">4</th>
-<th style="text-align:center;background-color: #AA0000; color: white">Red</th>
+<th style="text-align:center;background-color: #AA0000; color: white">أحمر</th>
 <th style="text-align:center;">8</th>
-<th style="text-align:center;background-color: #555555; color: white">Gray</th>
+<th style="text-align:center;background-color: #555555; color: white">رصاصي</th>
 <th style="text-align:center;">12</th>
-<th style="text-align:center;background-color: #FF5555; color: white">Light<br/>Red</th>
+<th style="text-align:center;background-color: #FF5555; color: white">أحمر<br/>فاتح</th>
 </tr>
 
 <tr>
 <th style="text-align:center;">1</th>
-<th style="text-align:center;background-color: #0000AA; color: white">Blue</th>
+<th style="text-align:center;background-color: #0000AA; color: white">أزرق</th>
 <th style="text-align:center;">5</th>
-<th style="text-align:center;background-color: #AA00AA; color: white">Magenta</th>
+<th style="text-align:center;background-color: #AA00AA; color: white">بنفسجي</th>
 <th style="text-align:center;">9</th>
-<th style="text-align:center;background-color: #5555FF; color: white">Light<br/>Blue</th>
+<th style="text-align:center;background-color: #5555FF; color: white">أزرق<br/>فاتح</th>
 <th style="text-align:center;">13</th>
-<th style="text-align:center;background-color: #FF55FF; color: white">Light<br/>Magenta</th>
+<th style="text-align:center;background-color: #FF55FF; color: white">بنفسجي<br/>فاتح</th>
 </tr>
 
 <tr>
 <th style="text-align:center;">2</th>
-<th style="text-align:center;background-color: #00AA00; color: white">Green</th>
+<th style="text-align:center;background-color: #00AA00; color: white">أخضر</th>
 <th style="text-align:center;">6</th>
-<th style="text-align:center;background-color: #AA5500; color: white">Brown</th>
+<th style="text-align:center;background-color: #AA5500; color: white">بني</th>
 <th style="text-align:center;">10</th>
-<th style="text-align:center;background-color: #55FF55; color: black">Light<br/>Green</th>
+<th style="text-align:center;background-color: #55FF55; color: black">أخضر<br/>فاتح</th>
 <th style="text-align:center;">14</th>
-<th style="text-align:center;background-color: #FFFF55; color: black">Yellow</th>
+<th style="text-align:center;background-color: #FFFF55; color: black">أصفر</th>
 </tr>
 
 <tr>
 <th style="text-align:center;">3</th>
-<th style="text-align:center;background-color: #00AAAA; color: white">Cyan</th>
+<th style="text-align:center;background-color: #00AAAA; color: white">سماوي</th>
 <th style="text-align:center;">7</th>
-<th style="text-align:center;background-color: #AAAAAA; color: white">Light<br/>Gray</th>
+<th style="text-align:center;background-color: #AAAAAA; color: white">رصاصي<br/>فاتح</th>
 <th style="text-align:center;">11</th>
-<th style="text-align:center;background-color: #55FFFF; color: black">Light<br/>Cyan</th>
+<th style="text-align:center;background-color: #55FFFF; color: black">سماوي<br/>فاتح</th>
 <th style="text-align:center;">15</th>
-<th style="text-align:center;background-color: #FFFFFF; color: black">White</th>
+<th style="text-align:center;background-color: #FFFFFF; color: black">أبيض</th>
 </tr>
 
 </table>
