@@ -13,7 +13,7 @@ body
 
 h1,h2,h3,h4,h5,h6
 {
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   color:#d90006
 }
 
@@ -118,7 +118,7 @@ p
 {
   line-height:30px;
   text-indent:40px;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:200;
   color:#9c9c9c;
   text-shadow:1px 1px #fff
@@ -167,7 +167,7 @@ p
 {
   font-weight:800;
   color:#6c7077;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans",sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   font-size:1.4em;
   text-shadow:1px 1px #fff
 }
@@ -268,7 +268,7 @@ pre
 .showcase-text
 {
   font-size:3em;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:bolder;
   color:#fff;
   text-align:center;
@@ -357,7 +357,7 @@ pre
   border:1px solid rgba(255,255,255,.4);
   color:rgba(255,255,255,.8);
   font-weight:200;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
 }
 
 .showcase-button:hover
@@ -402,7 +402,7 @@ img
 }
 .post
 {
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif !important;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif !important;
   line-height: 1.8;
   padding-bottom:30px;
 }
@@ -429,7 +429,7 @@ img
 time
 {
   color:#c9c9c9;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:100;
   text-shadow:1px 1px #fff
 }
@@ -489,7 +489,7 @@ time
 .project-container h1
 {
   font-size:3em;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:bolder;
   color:#fff;
   text-align:center;
@@ -498,7 +498,7 @@ time
 .project-container h1
 {
   font-size:3em;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans", sans-serif;
   font-weight:bolder;
   color:#fff;
   text-align:center;
@@ -508,7 +508,7 @@ time
 .project-container p
 {
   font-weight:200;
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans",sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   color:#fff;
   text-align:center;
   right-padding:20%
@@ -567,7 +567,7 @@ time
 
 .user-card h1
 {
-  font-family:"Amiri", "Helvetica Neue", helvetica, "Open Sans",sans-serif;
+  font-family:"Helvetica Neue", helvetica, "Open Sans",sans-serif;
   font-weight:bolder;
   font-size:2.5em;
   line-height:55px;
