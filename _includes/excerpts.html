@@ -1,4 +1,5 @@
 {% for post in site.posts %}
+{% if post.unlisted != true %}
 {% include classification.html %}
   <div id="article"
 {% if post.direction %}
@@ -36,5 +37,6 @@
 	  {{ classification }}</small></p>
 {% endif %}
 	</div>
+{% endif %}
 {% endfor %}
 

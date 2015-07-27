@@ -9,8 +9,10 @@ layout: default
 {% assign author_id = author | first%}
 {% assign a = site.data.authors[author_id] %}
     {% for post in site.posts %}
+		{% if post.unlisted != true %}
 	  	{% if post.author == author_id %}
 		{% assign author_has_posts = author_id %}
+		 {% endif %}
 		 {% endif %}
 	{% endfor %}
 
@@ -23,7 +25,7 @@ layout: default
 	  {% endif %}
   <div class="list-group">
     {% for post in site.posts %}
-	  	{% if post.author == author_id %}
+	  	{% if post.author == author_id and post.unlisted != true %}
         <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
                 <h4 class="list-group-item-heading">{{ post.title }}</h4>
          </a>

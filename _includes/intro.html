@@ -4,6 +4,7 @@
 <div class="recent-posts">
   <h1>مقالات حديثة</h1>
   {% for post in site.posts limit: 3 %}
+{% if post.unlisted != true %}
     {% if forloop.first %}
       {% assign add_class = 'most-recent' %}
       {% capture fresh_tag %}
@@ -27,6 +28,7 @@
     </ul>
     {% assign add_class = '' %}
     {% assign fresh_tag = '' %}
+	{% endif %}
   {% endfor %}
   <ul>
     <a href="{{ site.baseurl }}/list.html">شاهد المزيد...</a>

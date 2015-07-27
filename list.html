@@ -6,7 +6,9 @@ title: جميع المواضيع
   <h1>الأرشيف</h1>
   <ul class="posts">
     {% for post in site.posts %}
+		{% if post.unlisted != true %}
     <li><span>  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-left post-list">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</h4></time></span></span></li>
+	{% endif %}
     {% endfor %}
   </ul>
 </div>
