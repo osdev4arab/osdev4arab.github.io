@@ -9,7 +9,12 @@
 {% endif %}
 <div class="post {{ post.direction }}">
 {% if post.noexcerpt != true %}
-	{{ post.excerpt }}
+{% if post.direction == ltr %}
+{{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a></p>
+{% else %}
+{{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a style="text-decoration: underline dotted;" href="{{ site.baseurl }}{{ post.url }}"> اقرأ المزيد</a></p>
+{% endif %}
+
 {% else %}
 	{{ post.content }}
 {% endif %}
