@@ -1,5 +1,8 @@
 programming:
   name: Programming
 
+osdev:
+  name: مقدمه في تطوير نظم التشغيل
+
 jekyll:
   name: Jekyll
