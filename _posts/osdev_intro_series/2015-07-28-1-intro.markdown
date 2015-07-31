@@ -3,6 +3,7 @@ layout: post
 title: "١- المُقدمة"
 date:   2015-07-28 08:00:00
 tags: intro operating-system kernel linux windows unix ubuntu gcc make binutils qemu hexedit
+series: "سلسلة مقدمة إلى تطوير نظم التشغيل"
 direction: rtl
 author: iocoder
 comments: true

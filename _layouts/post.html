@@ -44,6 +44,24 @@ layout: default
 	   >
     {{ content }}
   </div>
+{% if post.series %}
+    {% for cat in post.categories %}
+	{% if cat == post.series %}
+	<h1> {{ cat }}</h1>
+    {% for part in site.categories[cat] reversed %}
+	{%if part.url == post.url %}
+        <h4 style="color:black;">{{ part.title }}</h4>
+	{% else %}
+	<a href="{{ site.baseurl }}{{ part.url }}">
+                <h4 class="list-group-item-heading">{{ part.title }}</h4>
+         </a>
+		 {% endif %}
+      {% endfor %}
+
+		 <br>
+	  {% endif %}
+    {% endfor %}
+{% endif %}
 </div>
 {% if author.bio %}
 <div id ="article">
