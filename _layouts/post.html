@@ -47,6 +47,7 @@ layout: default
 {% if post.series %}
     {% for cat in post.categories %}
 	{% if cat == post.series %}
+	<hr>
 	<h1> {{ cat }}</h1>
     {% for part in site.categories[cat] reversed %}
 	{%if part.url == post.url %}
