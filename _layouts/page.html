@@ -1,11 +1,66 @@
 ---
 layout: default
 ---
-<div id="article"
-{% if page.direction %}
-	   dir="{{ page.direction }}"
-{% endif %} >
-  <div class="post {{ page.direction }}"
-    {{ content }}
-  </div>
-</div>
+{% assign author = site.data.authors[page.author] %}
+
+<article>
+	<div class="panel panel-default col-lg-9">
+		<div class="panel-body">
+			<h1 class="text-center auth-h1">{{ author.name }}</h1>
+			<hr>
+			<div class="col-lg-5 text-center">
+				{% if author.img %}
+				<img src="{{ site.baseurl }}/images/authors/{{ author.img }}" class="auth-img" width="200" height="200" alt="{{ author.name }}" itemprop="image">
+				{% endif %}
+				<ul class="fa-ul text-right" id="auth-ul">
+					{% if author.dob %}
+					<li> <i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;{{ author.dob }}</li>
+					{% endif %}
+					{% if author.college%}
+					<li> <i class="fa fa-university"></i>&nbsp;&nbsp;{{ author.college }}</li>
+					{% endif %}
+					{% if author.site %}
+					<li> <i class="fa fa-link"></i>&nbsp;&nbsp;{{ author.site }}</li>
+					{% endif %}
+					{% if author.contact%}
+					<li> <i class="fa fa-envelope"></i>&nbsp;&nbsp;{{ author.contact }}</li>
+					{% endif %}
+				</ul>
+			</div>
+			<!-- Vertical Rule -->
+			<div class="vr hidden-xs hidden-sm hidden-md"></div>
+			<!-- Bio & Social Media -->
+			<div class="col-lg-7">
+				{% if author.bio %}
+				<h3 class="auth-h3">سيرة الكاتب</h3>
+	 			<p>{{ author.bio }}</p>
+				<hr>
+				{% endif %}
+				<div class="text-center">
+					<h5 class="auth-h5">تواصل مع {{ author.name }} </h5>
+					<div class="row auth-social">
+						<!-- Linkedin -->
+						{% if author.linkedin %}
+						<a target="_blank" href={{ author.linkedin }}>
+							<i class="linkedin fa fa-linkedin-square fa-2x"></i></a>
+						{% endif %}
+						<!-- fb -->
+						{%if author.facebook %}
+						<a target="_blank" href={{ author.facebook }}>
+							<i class="facebook fa fa-facebook-square fa-2x"></i></a>
+						{% endif %}
+						<!-- twitter -->
+						{% if author.twitter %}
+							<a target="_blank" href={{ author.twitter }}>
+								<i class="twitter fa fa-twitter-square fa-2x"></i></a>
+						{% endif %}
+						<!-- Google Plus -->
+						{% if author.g-plus %}
+							<a target="_blank" href={{ author.g-plus }}>
+								<i class="g-plus fa fa-google-plus-square fa-2x"></i></a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+</article>

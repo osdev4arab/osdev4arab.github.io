@@ -79,12 +79,12 @@ p
   transition:all .5s ease 0
 }
 
-.navbar 
+.navbar
 {
   display: none;
 }
 
-.navbar a 
+.navbar a
 {
   text-decoration: none;
   border-bottom: 1px #b1b1b1 solid;
@@ -742,7 +742,7 @@ time
 .inset {
   padding: 15px;
 }
-.navbar 
+.navbar
 {
   display: inherit;
   background-color: #ededed;
@@ -753,7 +753,7 @@ time
 
 @media screen and (max-width: 500px) {
   #welcome-greeting h2 {
-   font-size: 15px; 
+   font-size: 15px;
    transition: all 0.2s ease 0s;
    font-weight: 200;
    line-height: 30px;
@@ -769,13 +769,107 @@ time
       padding: 0 10px 0 10px;
   }
 
-
-
-
 .showcase-wrapper {
   width: 100%;
   height: 50%;
   font-size: small;
 }
+}
 
+/* Auhor page */
+
+/* author img */
+.auth-img {
+  object-fit: cover;
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  -webkit-filter: grayscale(60%);
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+.auth-img:hover {
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  -webkit-filter: grayscale(0%);
+}
+
+/* Vertical Rule */
+.vr{
+  height: 73%;
+  position: absolute;
+  border: 1px solid rgba(240,240,240,0.4);
+  top: 115px;
+  right: 42%;
+}
+
+/* author's info list */
+#auth-ul{
+  margin:20px 0;
+  padding: 0;
+  text-align:right;
+}
+
+/* social media contacts for author */
+.auth-social a i {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.g-plus {
+  color: #DD4B39;
+  padding: 5px;
+}
+.g-plus:hover {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #b53c2f;
+}
+.twitter {
+  color: #659FCB;
+  padding: 5px;
+}
+.twitter:hover {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #47718e;
+}
+.facebook {
+  color: #3864A3;
+  padding: 5px;
+}
+.facebook:hover {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #2a4b7a;
+}
+.linkedin{
+  color: #0177B5;
+  padding: 5px;
+}
+.linkedin:hover {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #005d8c;
+}
+
+.auth-h3, .auth-h5, .auth-h4 {
+   color:#BEBEBE;
+}
+
+.auth-h1{
+  color:#d90006;
 }
