@@ -3,7 +3,7 @@
 {% if post.categories.size > 0 %}
 	in  
 	{% for post_cat in post.categories %}
-	<a href="{{ site.baseurl }}/category/{{ post_cat }}"><code>{{ post_cat }}</code></a>,
+	<a href="{{ site.baseurl }}/category/{{ post_cat }}.html"><code>{{ post_cat }}</code></a>,
 	{% endfor %}
 {% endif %}
 {% if post.tags.size > 0 %}

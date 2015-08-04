@@ -1,42 +1,68 @@
 {% for post in site.posts %}
-{% if post.unlisted != true %}
-{% include classification.html %}
-  <div id="article"
-{% if post.direction %}
-	   dir="{{ post.direction }}"
-{% endif %} >
-{% if post.static != true %}
-<a href="{{ site.baseurl }}{{ post.url }}"><h4>{{ post.title }}</h4></a>
-{% endif %}
-<div class="post {{ post.direction }}">
-{% if post.noexcerpt != true %}
-{% if post.direction == ltr %}
-{{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a></p>
-{% else %}
-{{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a style="text-decoration: underline dotted;" href="{{ site.baseurl }}{{ post.url }}"> اقرأ المزيد</a></p>
-{% endif %}
+  {% if post.unlisted != true %}
+    {% include classification.html %}
+    <div id="article"
+      {% if post.direction %}
+        dir="{{ post.direction }}"
+      {% endif %}
+    >
 
-{% else %}
-	{{ post.content }}
-{% endif %}
+    {% if post.static != true %}
+      <a href="{{ site.baseurl }}{{ post.url }}">
+          <h4>{{ post.title }} {% if post.series %} ({{ post.series }}) {% endif %}</h4>
+      </a>
+    {% endif %}
 
-</div>
-{% if post.static != true %}
-<p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left;">     <small>
-	&nbsp;<i class="fa fa-calendar-o"></i> {{ post.date | date_to_string}} {% if post.author %}
+    <div class="post {{ post.direction }}">
+      {% if post.noexcerpt != true %}
+        {% if post.direction == ltr %}
+          {{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a href="{{ site.baseurl }}{{ post.url }}"> Read more</a></p>
+        {% else %}
+          {{ post.excerpt | strip_newlines | append: '￿' | replace: '</p>￿', '...' }}<a style="text-decoration: underline dotted;" href="{{ site.baseurl }}{{ post.url }}"> اقرأ المزيد</a></p>
+        {% endif %}
 
-{% assign author = site.data.authors[post.author] %}
-   	by 
-	{% if author.name %}
-	{{ author.name }}
-	{% else %}
-	{{ post.author }}
-	{% endif %}
-   	{% endif %}	| 
+      {% else %}
+        {{ post.content }}
+      {% endif %}
+    </div>
 
-	  {{ classification }}</small></p>
-{% endif %}
-	</div>
-{% endif %}
+    {% if post.static != true %}
+      <p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left;">
+      <small>
+        &nbsp;<i class="fa fa-calendar-o"></i>
+      {{ post.date | date_to_string}}
+
+      {% if post.author %}
+        {% assign author = site.data.authors[post.author] %}
+        by
+        {% if author.img %}
+          <img src="{{ site.baseurl }}/images/authors/{{ author.img }}"
+               width="25" height="25"
+               alt="{{ author.name }}" itemprop="image">
+        {% endif %}
+
+        {% if author.name %}
+          {% if author.page %}
+            <a href="{{ author.page }}">
+          {% elsif author.site %}
+            <a href="{{ author.site }}">
+          {% endif %}
+          <span class="author">{{ author.name }}</span>
+
+          {% if author.page or author.site %}
+            </a>
+          {% endif %}
+        {% elsif post.author %}
+            <span class="author">{{ post.author }}</span>
+        {% endif %}
+
+        | {{ classification }}
+      {% endif %}
+
+      </small></p>
+    {% endif %}
+
+    </div>
+  {% endif %}
 {% endfor %}
 

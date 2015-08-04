@@ -18,16 +18,30 @@ layout: default
 
 		{% if author_has_posts == author_id %}
   <div class="list-group">
-	  {% if a.name %}
-	  <a href="{{ a.site }}"><h3 name="{{ author_id }}">{{ a.name }}</h3></a>
-	  {% else %}
-	  <h3 name="{{ author_id }}">{{ author_id }}</h3>
-	  {% endif %}
+    {% if a.name %}
+      <h3>
+        {% if a.page %}
+          <a href="{{ a.page }}">
+        {% elsif a.site %}
+          <a href="{{ a.site }}">
+        {% endif %}
+
+        {{ a.name }}
+
+        {% if a.page or a.site %}
+          </a>
+        {% endif %}
+      </h3>
+    {% elsif post.author %}
+        <span class="author">{{ post.author }}</span>
+    {% endif %}
+
+
   <div class="list-group">
     {% for post in site.posts %}
 	  	{% if post.author == author_id and post.unlisted != true %}
         <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
-                <h4 class="list-group-item-heading">{{ post.title }}</h4>
+                <h4 class="list-group-item-heading">{{ post.title }} {% if post.series %} ({{ post.series }}) {% endif %}</h4>
          </a>
 		 {% endif %}
     {% endfor %}
