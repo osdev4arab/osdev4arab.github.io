@@ -37,3 +37,9 @@ defaults:
       path: "osdev_intro_series"
     values:
       category: "سلسلة مقدمة إلى تطوير نظم التشغيل"
+      series : "سلسلة مقدمة إلى تطوير نظم التشغيل"
+  - scope:
+      path: "assembly_intro_series"
+    values:
+      category : "سلسلة تعلم لغة التجميع"
+      series : "سلسلة تعلم لغة التجميع"

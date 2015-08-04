@@ -23,8 +23,18 @@ test:
     g-plus:     https://octodex.github.com/images/constructocat2.jpg
     img:        octocat.jpg
 
-
 iocoder:
     name:       مصطفى عبد العزيز
     site:       http://iocoder.quafios.com/
     contact:    iocoder@aol.com
+
+mohamed-anwar:
+    name:       محمد أنور
+    contact:    eng.mohamed.anwar@ieee.org
+    page:       /u/mohamed-anwar.html
+    facebook:   https://www.facebook.com/manwarsleem
+    dob:        ١٩٩٦/٩/٩
+    college:    كلية الهندسة
+    bio:        شخص هاوي مهتم بعلوم الحاسب وتطوير البرمجيات الحرة
+    biodir:     rtl
+    img:        mohamed-anwar.jpg
