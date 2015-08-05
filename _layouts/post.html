@@ -11,13 +11,13 @@ layout: default
   {% endif %}
 >
 
+
+  {% if page.static != true %}
   <div class="article-title">{{ page.title }}</div>
   <p id="post-meta">{{ classification }}</p>
   <p class="meta">
     <small>
-      {% if page.static != true %}
-        &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
-      {% endif %}
+      &nbsp;<i class="fa fa-calendar-o"></i> {{ page.date | date_to_string}}
 
       {% if post.contact %}
         <i class="fa fa-envelope-o"></i>&nbsp;{{ page.contact }} </p>
@@ -51,6 +51,7 @@ layout: default
 
   <hr/>
 
+  {% endif %}
   <div class="post {{ post.direction }}">
     {{ content }}
   </div>
