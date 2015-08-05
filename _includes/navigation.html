@@ -1,4 +1,4 @@
-<div class="navbar navbar-default" role="navigation">
+<div class="navbar navbar-default bg" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -10,12 +10,23 @@
 	  <a href="{{ site.baseurl }}/"><p class="navbar-brand">{{ site.name }}</p></a>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav new-nav">
       <li><a href="{{ site.baseurl }}/list.html">الأرشيف</a></li>
       <li><a href="{{ site.baseurl }}/categories.html">تصنيفات</a></li>
 	  <li><a href="{{ site.baseurl }}/authors.html">الكُتاب</a></li>
       <li><a href="{{ site.baseurl }}/about.html">عنَّا</a></li>
       <li><a href="{{ site.baseurl }}/community_rules.html">قواعد المجتمع</a></li>
+      <li><h6 id="h-nav"> المقالات المميزة </h6></li>
+        {% for post in site.posts %}
+          {% if post.featured == true %}
+          <!-- for series, make featured value true in only one post/article of the series to avoid replication -->
+            {% if post.series %}
+              <li><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
+            {% else %}
+              <li> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
+            {% endif %}
+         {% endif %}
+      {% endfor %}
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -25,17 +36,34 @@
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
 	  <li class="sidebar-brand"><a href="{{ site.baseurl }}/"><img src="{{ site.logo }}"></a><h3>{{ site.description }}</h3></li>
-    <hr />
+    <hr>
       <li><a href="{{ site.baseurl }}/list.html">الأرشيف</a></li>
       <li><a href="{{ site.baseurl }}/categories.html">تصنيفات</a></li>
 	  <li><a href="{{ site.baseurl }}/authors.html">الكُتاب</a></li>
       <li><a href="{{ site.baseurl }}/about.html">عنَّا</a></li>
       <li><a href="{{ site.baseurl }}/community_rules.html">قواعد المجتمع</a></li>
-    <hr />
+    <hr>
+    <li><h6> المقالات المُميزة </h6></li>
+      {% for post in site.posts %}
+        {% if post.featured == true %}
+        <!-- for series, make featured value true in only one post/article of the series to avoid replication -->
+          {% if post.series and post.series.size > 40 %}
+            <li class="wrap-text"><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
+          {% elsif post.series.size <= 40 %}
+            <li><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
+          {% elsif post.title.size > 40 %}
+            <li class="wrap-text"> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
+          {% else %}
+            <li> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
+          {% endif %}
+       {% endif %}
+    {% endfor %}
+      <hr>
+
     <div id="social-wrapper">
-      <li> <a href="{{ site.facebook }}"><i class="fa fa-facebook-square"></i> مجموعة النقاش على Facebook</a></li>
-      <li> <a href="{{ site.github }}"><i class="fa fa-github-square"></i> مصدر الصفحة على Github</a> </li>
-      <li> <a href="{{ site.trello }}"><i class="fa fa-trello"></i> قائمة المهام على Trello</a></li>
+      <li> <a href="{{ site.facebook }}"><i class="fa fa-facebook-square" id="fb"></i> مجموعة النقاش على Facebook</a></li>
+      <li> <a href="{{ site.github }}"><i class="fa fa-github-square" id="github"></i> مصدر الصفحة على Github</a> </li>
+      <li> <a href="{{ site.trello }}"><i class="fa fa-trello" id="trello"></i> قائمة المهام على Trello</a></li>
 	  <li> <a href="{{ site.udemy }}"><i class="udemy" ></i> دروس المجتمع على Udemy</a> </li>
     </div>
   </ul>

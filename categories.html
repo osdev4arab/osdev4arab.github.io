@@ -8,7 +8,7 @@ layout: default
 
 {% for category in site.categories %}
   <div class="list-group">
-	  <h3 name="{{ category | first }}"><a href="{{ site.baseurl }}/category/{{ category | first }}.html">{{ category | first }}</a></h3>
+	  <h3 class="h-padding" name="{{ category | first }}"><a href="{{ site.baseurl }}/category/{{ category | first }}.html">{{ category | first }}</a></h3>
   <div class="list-group">
     {% for posts in category %}
       {% for post in posts %}
