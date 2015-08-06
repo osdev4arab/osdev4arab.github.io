@@ -29,7 +29,6 @@ direction: rtl
 
 ٣- فهم الـCharacter Devices الخاصة باللينكس و كتابة واحد بسيط.
 
-٤- فهم كيفية عمل نظام الـUSB في اللينكس كيرنال و كتابة تعريف خاص بـUSB بسيط. 
+٤- فهم كيفية عمل نظام الـUSB في اللينكس كيرنال و كتابة تعريف خاص بـUSB بسيط.
 
 **[رابط الكورس](https://www.udemy.com/introduction-to-linux-kernel-device-drivers/)**
-

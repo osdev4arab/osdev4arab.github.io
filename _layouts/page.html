@@ -39,6 +39,11 @@ layout: default
 				<div class="text-center">
 					<h5 class="auth-h5">تواصل مع {{ author.name }} </h5>
 					<div class="row auth-social">
+						<!-- Github -->
+						{% if author.github %}
+							<a target="_blank" href={{ author.github }}>
+								<i class="github fa fa-github-square fa-2x"></i></a>
+						{% endif %}
 						<!-- Linkedin -->
 						{% if author.linkedin %}
 						<a target="_blank" href={{ author.linkedin }}>

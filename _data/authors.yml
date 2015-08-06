@@ -10,19 +10,6 @@ jekyll:
     name:       Jekyll
     site:       /blog/u/jekyll/
 
-test:
-    name:       للتجربة فقط
-    dob:        dd/mm/yyyy
-    college:    test
-    site:       example.example
-    contact:    example@example.ex
-    bio:        هذه الصفحة للتجربة فقط لا غير.هذه الصفحة للتجربة فقط لا غير.هذه الصفحة للتجربة فقط لا غير.هذه الصفحة للتجربة فقط لا غير.هذه الصفحة للتجربة فقط لا غير.هذه الصفحة للتجربة فقط لا غير.
-    linkedin:   https://octodex.github.com/images/constructocat2.jpg
-    facebook:   https://octodex.github.com/images/constructocat2.jpg
-    twitter:    https://octodex.github.com/images/constructocat2.jpg
-    g-plus:     https://octodex.github.com/images/constructocat2.jpg
-    img:        octocat.jpg
-
 iocoder:
     name:       مصطفى عبد العزيز
     site:       http://iocoder.quafios.com/
