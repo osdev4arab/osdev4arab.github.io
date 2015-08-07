@@ -955,3 +955,9 @@ time
 .navbar-default .navbar-toggle:hover {
   background-color: #F3F4F4;
 }
+.navbar-default .navbar-collapse {
+  max-height: none;
+}
+.addthis_sharing_toolbox {
+  text-align: center;
+}
