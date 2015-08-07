@@ -421,7 +421,7 @@ img
 {
   font-family: 'Amiri', serif;
   line-height: 1.8;
-  padding-bottom:30px;
+  padding-bottom:10px;
 }
 
 .user-social
@@ -765,7 +765,7 @@ time
   }
 
   #article {
-      padding: 0 10px 0 10px;
+    padding: 10px 10px 0 10px
   }
 
 .showcase-wrapper {
@@ -948,4 +948,10 @@ time
   color: #d90006;
   background-color: #F3F4F4;
   text-decoration: none;
+}
+.navbar-default .navbar-toggle:focus {
+  background-color: #FEFEFE;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: #F3F4F4;
 }
