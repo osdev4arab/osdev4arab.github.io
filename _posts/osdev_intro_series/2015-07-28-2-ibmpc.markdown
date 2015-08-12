@@ -4,6 +4,7 @@ title: "٢- مدخل إلى الكمبيوتر الشخصي IBM PC"
 date:   2015-07-28 08:01:00
 tags: x86 8086 8088 80186 80286 80386 pentium real-mode protected-mode ibm pc
 series: "سلسلة مقدمة إلى تطوير نظم التشغيل"
+permalink: /osdev/osdev/2-ibm-pc.html
 direction: rtl
 author: iocoder
 comments: true
