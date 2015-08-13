@@ -3,12 +3,18 @@ layout: default
 ---
 
 <header id="post-header">
-    <h1 id="post-title" class="h-padding">{{ page.category }}</h1>
-    <h4 id="post-subtitle">المواضيع في هذا التصنيف</h4>
+  <h1 id="post-title" class="h-padding">
+      {% for cat_data in site.data.categories %}
+        {% if cat_data.name == page.category %}
+            {{ cat_data.title }}
+        {% endif %}
+      {% endfor %}
+  </h1>
+  <h4 id="post-subtitle">المواضيع في هذا التصنيف</h4>
 </header>
 
 <div id="post-content">
-	<p> {{ page.desc }} </p>
+  <p> {{ page.desc }} </p>
     {% if site.categories[page.category] %}
         {% for post in site.categories[page.category] %}
             {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}

@@ -1,6 +1,6 @@
 ---
 layout: categories
 title: "سلسلة مقدمة إلى تطوير نظم التشغيل"
-category: "سلسلة مقدمة إلى تطوير نظم التشغيل"
-permalink: /category/سلسلة مقدمة إلى تطوير نظم التشغيل.html
+category: osdev_intro_series
+permalink: /category/osdev-intro-series.html
 ---

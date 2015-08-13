@@ -3,10 +3,10 @@ layout: post
 title: "١- المُقدمة"
 date:   2015-07-28 08:00:00
 tags: intro operating-system kernel linux windows unix ubuntu gcc make binutils qemu hexedit
-series: "سلسلة مقدمة إلى تطوير نظم التشغيل"
 direction: rtl
 author: iocoder
 permalink: /osdev/bootloader/1-intro.html
+series: "osdev_intro_series"
 comments: true
 #for series, make featured value true in only one post/article of the series to avoid replication
 featured: true
