@@ -23,23 +23,25 @@ redcarpet:
   extensions: ["tables"]
 
 defaults:
-  - scope:
+  -
+   scope:
       path: ""
       type: "pages"
-    values:
+   values:
       layout: "default"
-  - scope:
+  -
+   scope:
       path: ""
       type: "posts"
-    values:
+   values:
       layout: "post"
-  - scope:
+  -
+   scope:
       path: "osdev_intro_series"
-    values:
-      category: "سلسلة مقدمة إلى تطوير نظم التشغيل"
-      series : "سلسلة مقدمة إلى تطوير نظم التشغيل"
-  - scope:
+   values:
+      category: "osdev_intro_series"
+  -
+   scope:
       path: "assembly_intro_series"
-    values:
-      category : "سلسلة تعلم لغة التجميع"
-      series : "سلسلة تعلم لغة التجميع"
+   values:
+      category: "assembly_intro_series"
