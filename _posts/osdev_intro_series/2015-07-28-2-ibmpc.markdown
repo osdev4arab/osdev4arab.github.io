@@ -8,6 +8,7 @@ direction: rtl
 author: iocoder
 series: "osdev_intro_series"
 comments: true
+featured_img: /images/osdev/bootloader/ibmpc.jpg
 ---
 
 دأب الإنسان في صناعة أدوات تساعده في أداء العمليات الحسابية منذ ما قبل الميلاد.

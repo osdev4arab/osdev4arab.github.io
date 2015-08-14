@@ -1,7 +1,7 @@
 name: OSDev4Arab
 author: OSDev4Arab
 domain: osdev4arab.github.io
-baseurl: 
+baseurl:
 description: نحو مجتمع عربي عن تطوير نظم التشغيل
 github: http://www.github.com/osdev4arab/osdev4arab
 twitter: http://www.twitter.com/
@@ -10,9 +10,10 @@ linkedin: http://www.linkedin.com
 trello: https://trello.com/b/pslUMpQW/osdev4arab-website
 udemy: https://www.udemy.com/u/osdev4arab/
 logo: /images/logo-hq.png
-email: osdev4arab@gmail.com 
+icon: /images/mstile-310x310.png
+email: osdev4arab@gmail.com
 location: $HOME
-disqus: osdev4arab 
+disqus: osdev4arab
 permalink: /:categories/:title.html
 ##Make sure to edit the above fields, especially for disqus.
 
