@@ -991,3 +991,6 @@ time
 code, .previous>a, .next>a, table {
   font-family: "HelveticaNeueLT-W20 45-Light", serif;
 }
+table {
+  width: 100%;
+}
