@@ -1,8 +1,7 @@
-programming:
-  name: Programming
+- name: assembly_intro_series
+  title: "سلسلة تعلم لغة التجميع"
+  permalink: category/assembly-intro-series.html
 
-osdev:
-  name: مقدمه في تطوير نظم التشغيل
-
-jekyll:
-  name: Jekyll
+- name: osdev_intro_series
+  title: "سلسلة مقدمة إلي تطوير نظم التشغيل"
+  permalink: category/osdev-intro-series.html

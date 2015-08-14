@@ -3,9 +3,10 @@ layout: post
 title: "٣- محمل الإقلاع bootloader"
 date:   2015-07-28 08:02:00
 tags: boot-loader hlt cli syntax boot cga display hello-world
-series: "سلسلة مقدمة إلى تطوير نظم التشغيل"
+permalink: /osdev/bootloader/3-bootloader.html
 comments: true
 direction: rtl
+series: "osdev_intro_series"
 author: iocoder
 ---
 

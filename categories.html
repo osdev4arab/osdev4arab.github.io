@@ -6,19 +6,17 @@ layout: default
     <h2 id="post-subtitle">المواضيع بحسب التصنيفات</h4>
 </header>
 
-{% for category in site.categories %}
+{% for cat in site.data.categories %}
   <div class="list-group">
-	  <h3 class="h-padding" name="{{ category | first }}"><a href="{{ site.baseurl }}/category/{{ category | first }}.html">{{ category | first }}</a></h3>
-  <div class="list-group">
-    {% for posts in category %}
-      {% for post in posts %}
-	  	{% if post.title %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
-                <h4 class="list-group-item-heading">{{ post.title }}</h4>
-         </a>
-		 {% endif %}
+    <h3 class="h-padding" name="{{ cat.name }}">
+      <a href="{{ site.baseurl }}/{{ cat.permalink }}">{{ cat.title }}</a>
+    </h3>
+    <div class="list-group">
+      {% for post in site.categories[cat.name] %}
+          <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item">
+            <h4 class="list-group-item-heading">{{ post.title }}</h4>
+          </a>
       {% endfor %}
-    {% endfor %}
-  <div class="list-group">
+    </div>
   </div>
 {% endfor %}

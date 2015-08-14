@@ -1,5 +1,5 @@
 {% for post in site.posts %}
-  {% if post.unlisted != true %}
+  {% if post.static != true and post.unlisted != true %}
     {% include classification.html %}
     <div id="article"
       {% if post.direction %}
@@ -9,7 +9,7 @@
 
     {% if post.static != true %}
       <a href="{{ site.baseurl }}{{ post.url }}">
-          <h4>{{ post.title }} {% if post.series %} ({{ post.series }}) {% endif %}</h4>
+          <h4>{{ post.title }}</h4>
       </a>
     {% endif %}
 
@@ -27,7 +27,7 @@
     </div>
 
     {% if post.static != true %}
-      <p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left;">
+      <p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left; padding: 7px 0;">
       <small>
         &nbsp;<i class="fa fa-calendar-o"></i>
       {{ post.date | date_to_string}}
@@ -65,4 +65,3 @@
     </div>
   {% endif %}
 {% endfor %}
-

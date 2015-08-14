@@ -16,14 +16,22 @@
 	  <li><a href="{{ site.baseurl }}/authors.html">الكُتاب</a></li>
       <li><a href="{{ site.baseurl }}/about.html">عنَّا</a></li>
       <li><a href="{{ site.baseurl }}/community_rules.html">قواعد المجتمع</a></li>
+      <li><a href="{{ site.baseurl }}/publishing_model.html">نظام النشر</a></li>
+      <li><a href="{{ site.baseurl }}/os-learning-roadmap.html">تعلم نظم التشغيل (خارطة طريق)</a></li>
       <li><h6 id="h-nav"> المقالات المميزة </h6></li>
         {% for post in site.posts %}
           {% if post.featured == true %}
           <!-- for series, make featured value true in only one post/article of the series to avoid replication -->
             {% if post.series %}
-              <li><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
+              {% for cat_data in site.data.categories %}
+                 {% if cat_data.name == post.series %}
+                   <li>
+                     <a class=series href="{{ site.baseurl }}/{{ cat_data.permalink }}.html"> {{ cat_data.title }} </a>
+                   </li>
+                 {% endif %}
+              {% endfor %}
             {% else %}
-              <li> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
+              <li> <a class="non-series" href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
             {% endif %}
          {% endif %}
       {% endfor %}
@@ -42,21 +50,29 @@
 	  <li><a href="{{ site.baseurl }}/authors.html">الكُتاب</a></li>
       <li><a href="{{ site.baseurl }}/about.html">عنَّا</a></li>
       <li><a href="{{ site.baseurl }}/community_rules.html">قواعد المجتمع</a></li>
+      <li><a href="{{ site.baseurl }}/publishing_model.html">نظام النشر</a></li>
+      <li><a href="{{ site.baseurl }}/os-learning-roadmap.html">تعلم نظم التشغيل (خارطة طريق)</a></li>
     <hr>
     <li><h6> المقالات المُميزة </h6></li>
-      {% for post in site.posts %}
-        {% if post.featured == true %}
-        <!-- for series, make featured value true in only one post/article of the series to avoid replication -->
-          {% if post.series and post.series.size > 40 %}
-            <li class="wrap-text"><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
-          {% elsif post.series.size <= 40 %}
-            <li><a href="{{ site.baseurl }}/category/{{ post.series }}.html"> {{ post.series }} </a></li>
-          {% elsif post.title.size > 40 %}
+    {% for post in site.posts %}
+      {% if post.featured %}
+      <!-- for series, make featured value true in only one post/article of the series to avoid replication -->
+        {% if post.series %}
+            {% for cat_data in site.data.categories %}
+              {% if cat_data.name == post.series %}
+                  <li {% if post.series.size > 40 %} class="wrap-text" {% endif %}>
+                    <a href="{{ site.baseurl }}/{{ cat_data.permalink }}">{{ cat_data.title }}</a>
+                  </li>
+              {% endif %}
+            {% endfor %}
+        {% else %}
+          {% if post.title.size > 40 %}
             <li class="wrap-text"> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
           {% else %}
             <li> <a href="{{ site.baseurl }}{{ post.permalink }}"> {{ post.title }} </a></li>
           {% endif %}
-       {% endif %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
       <hr>
 
