@@ -27,7 +27,7 @@
     </div>
 
     {% if post.static != true %}
-      <p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left;">
+      <p style="border-top: 1px solid #e8e8e8; line-height: 30px; direction:ltr; text-align: left; padding: 7px 0;">
       <small>
         &nbsp;<i class="fa fa-calendar-o"></i>
       {{ post.date | date_to_string}}
@@ -65,4 +65,3 @@
     </div>
   {% endif %}
 {% endfor %}
-
