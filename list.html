@@ -2,13 +2,15 @@
 title: جميع المواضيع
 ---
 <div class="container">
-  <div id="article">
-  <h1>الأرشيف</h1>
-  <ul class="posts">
+  <h1>الأرشيف</h1><br>
+  <div class="list-group">
     {% for post in site.posts %}
-		{% if post.unlisted != true %}
-    <li><span>  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-left post-list">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</h4></time></span></span></li>
-	{% endif %}
-    {% endfor %}
-  </ul>
+		  {% if post.unlisted != true %}
+        <span><a class="list-group-item clearfix" href="{{ site.baseurl }}{{ post.url }}">
+          <h4 class="list-group-item-heading">{{ post.title }}
+          <time class="pull-left">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</time>
+          </h4>
+        </a></span>
+	   {% endif %}
+  {% endfor %}
 </div>
